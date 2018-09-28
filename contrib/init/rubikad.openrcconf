@@ -1,0 +1,26 @@
+# /etc/conf.d/rubikad: config file for /etc/init.d/rubikad
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/rubika/rubika.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/rubikad"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/rubikad.pid"
+
+# Where to write rubikad data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/rubikad"
+
+# User and group to own rubikad process
+#BITCOIND_USER="rubika"
+#BITCOIND_GROUP="rubika"
+
+# Path to rubikad executable
+#BITCOIND_BIN="/usr/bin/rubikad"
+
+# Nice value to run rubikad under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

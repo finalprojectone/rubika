@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Rubika
+Comment=Rubika P2P Cryptocurrency
+Comment[fr]=Rubika, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Rubika, eşten eşe kriptografik sanal para birimi
+Exec=rubika-qt %u
+Terminal=false
+Type=Application
+Icon=rubika128
+MimeType=x-scheme-handler/rubika;
+Categories=Office;Finance;

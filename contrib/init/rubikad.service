@@ -1,0 +1,26 @@
+[Unit]
+Description=Rubika's distributed currency daemon
+After=network.target
+
+[Service]
+User=rubika
+Group=rubika
+
+Type=forking
+PIDFile=/var/lib/rubikad/rubikad.pid
+
+ExecStart=/usr/bin/rubikad -daemon -pid=/var/lib/rubikad/rubikad.pid \
+          -conf=/etc/rubika/rubika.conf -datadir=/var/lib/rubikad
+
+ExecStop=-/usr/bin/rubika-cli -conf=/etc/rubika/rubika.conf \
+         -datadir=/var/lib/rubikad stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
